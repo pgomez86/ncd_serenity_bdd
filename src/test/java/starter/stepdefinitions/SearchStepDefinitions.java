@@ -1,16 +1,13 @@
 package starter.stepdefinitions;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.navigation.NavigateTo;
-import starter.search.LookForInformation;
+import starter.search.irMenuTemplate;
 import starter.search.WikipediaArticle;
 
 public class SearchStepDefinitions {
@@ -25,11 +22,17 @@ public class SearchStepDefinitions {
             actor.wasAbleTo(NavigateTo.theGestionDeTemplatePage());
     }
 
+    @Y("{actor} selecciona el link Gestion")
+    public void irMenuGestionTemplate(Actor actor) {
+        actor.attemptsTo(
+                irMenuTemplate.irMenuGestion()
+        );
+    }
 
     @Cuando("{actor} looks up {string}")
     public void searchesFor(Actor actor, String term) {
         actor.attemptsTo(
-                LookForInformation.about(term)
+              //  irMenuTemplate.about(term)
         );
     }
 
