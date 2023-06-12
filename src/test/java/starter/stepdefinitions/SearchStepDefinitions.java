@@ -2,9 +2,9 @@ package starter.stepdefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -15,19 +15,19 @@ import starter.search.WikipediaArticle;
 
 public class SearchStepDefinitions {
 
-    @Given("{actor} is researching things on the internet")
+    @Dado("{actor} esta logueado en NCD intranet")
     public void researchingThings(Actor actor) {
-        actor.wasAbleTo(NavigateTo.theWikipediaHomePage());
+        actor.wasAbleTo(NavigateTo.theIntranetPage());
     }
 
-    @When("{actor} looks up {string}")
+    @Cuando("{actor} looks up {string}")
     public void searchesFor(Actor actor, String term) {
         actor.attemptsTo(
                 LookForInformation.about(term)
         );
     }
 
-    @Then("{actor} should see information about {string}")
+    @Entonces("{actor} should see information about {string}")
     public void should_see_information_about(Actor actor, String term) {
         actor.attemptsTo(
                 Ensure.that(WikipediaArticle.HEADING).hasText(term)
