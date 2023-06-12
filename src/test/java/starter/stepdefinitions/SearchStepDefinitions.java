@@ -16,9 +16,15 @@ import starter.search.WikipediaArticle;
 public class SearchStepDefinitions {
 
     @Dado("{actor} esta logueado en NCD intranet")
-    public void researchingThings(Actor actor) {
+    public void loginIntranet(Actor actor) {
         actor.wasAbleTo(NavigateTo.theIntranetPage());
     }
+
+    @Cuando("{actor} accede a Gestion de templates")
+    public void irGestionTemplate(Actor actor) {
+            actor.wasAbleTo(NavigateTo.theGestionDeTemplatePage());
+    }
+
 
     @Cuando("{actor} looks up {string}")
     public void searchesFor(Actor actor, String term) {
