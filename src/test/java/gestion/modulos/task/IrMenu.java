@@ -11,7 +11,7 @@ public class IrMenu {
         );
     }
     public static Performable irMenuGestionModuloDWDM() {
-        return Task.where("{0} accede al item menu 'DWDM'",
+        return Task.where("{0} accede al item menu 'Gestion de Inventario DWDM'",
                 Click.on(AccederMenuModulo.ITEM_MENU_DWDM)
         );
     }

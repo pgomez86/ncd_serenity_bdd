@@ -6,5 +6,5 @@ Característica: MODULO Gestion DWDM -> Sistemas-Rutas-Spans
     Dado Jose esta logueado en NCD intranet
     Cuando Jose accede a Gestion de templates
     Y Jose selecciona el link Gestion
-    Y Jose selecciona el item Gestión de Inventario DWDM
+    Y Jose selecciona el item Gestion de Inventario DWDM
 
