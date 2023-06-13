@@ -1,15 +1,12 @@
 package gestion.modulos.stepdefinitions;
 
-import gestion.modulos.task.IrTab;
-import gestion.modulos.task.NavegarA;
+import gestion.modulos.task.*;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import gestion.modulos.task.IrMenu;
-import gestion.modulos.task.AccederMenuModulo;
 
 public class BusquedaStepDefinitions {
 
@@ -42,14 +39,15 @@ public class BusquedaStepDefinitions {
         actor.attemptsTo(
                 IrTab.irTabSistemaRutaSpan()
         );
-        Thread.sleep(10000);
+
     }
 
     @Y("{actor} ingresa el sistema {string}")
-    public void ingresarBusqueda(Actor actor, String text) {
+    public void ingresarBusqueda(Actor actor, String text) throws InterruptedException {
         actor.attemptsTo(
-                //IrTab.irTabSistemaRutaSpan()
+                BuscarCon.ingresarDatoSistema(text)
         );
+        Thread.sleep(10000);
     }
 
     @Y("{actor} selecciona el status {string}")
