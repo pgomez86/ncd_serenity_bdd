@@ -29,12 +29,12 @@ public class BusquedaStepDefinitions {
         );
     }
 
-    @Y("{actor} Jose selecciona el item Gestión de Inventario DWDM")
+    @Y("{actor} selecciona el item Gestion de Inventario DWDM")
     public void irMenuItemGestionInventarioDWDM(Actor actor) throws InterruptedException {
         actor.attemptsTo(
                 IrMenu.irMenuGestionModuloDWDM()
         );
-        Thread.sleep(5000);
+        Thread.sleep(10000);
     }
 
     @Entonces("{actor} should see information about {string}")
