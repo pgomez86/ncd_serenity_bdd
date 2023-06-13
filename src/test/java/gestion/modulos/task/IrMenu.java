@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 public class IrMenu {
     public static Performable irMenuGestion() {
         return Task.where("{0} accede al link menu 'Gestion'",
-                Click.on(AccederMenuGestionTemplate.GESTION_TEMPLATE_LINK)
+                Click.on(AccederMenuGestionTemplate.LINK_GESTION_TEMPLATE)
         );
     }
     public static Performable irMenuGestionModuloDWDM() {
