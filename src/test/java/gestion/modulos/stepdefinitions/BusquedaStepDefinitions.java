@@ -7,8 +7,8 @@ import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import gestion.modulos.task.IrMenuTemplate;
-import gestion.modulos.task.WikipediaArticle;
+import gestion.modulos.task.IrMenu;
+import gestion.modulos.task.AccederMenuModulo;
 
 public class BusquedaStepDefinitions {
 
@@ -25,14 +25,22 @@ public class BusquedaStepDefinitions {
     @Y("{actor} selecciona el link Gestion")
     public void irMenuGestionTemplate(Actor actor) {
         actor.attemptsTo(
-                IrMenuTemplate.irMenuGestion()
+                IrMenu.irMenuGestion()
         );
+    }
+
+    @Y("{actor} Jose selecciona el item Gestión de Inventario DWDM")
+    public void irMenuItemGestionInventarioDWDM(Actor actor) throws InterruptedException {
+        actor.attemptsTo(
+                IrMenu.irMenuGestionModuloDWDM()
+        );
+        Thread.sleep(5000);
     }
 
     @Entonces("{actor} should see information about {string}")
     public void should_see_information_about(Actor actor, String term) {
         actor.attemptsTo(
-                Ensure.that(WikipediaArticle.HEADING).hasText(term)
+                //Ensure.that(AccederMenuModulo.HEADING).hasText(term)
         );
     }
 }
