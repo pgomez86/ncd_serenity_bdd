@@ -1,10 +1,12 @@
-package starter.navigation;
+package gestion.modulos.task;
 
+import gestion.modulos.ui.GestionDeTemplatesPage;
+import gestion.modulos.ui.IntranetPage;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class NavigateTo {
+public class NavegarA {
     public static Performable theGestionDeTemplatePage() {
         return Task.where("{0} accede a Gestion de Template",
                 Open.browserOn().the(GestionDeTemplatesPage.class));

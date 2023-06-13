@@ -1,4 +1,4 @@
-package starter.navigation;
+package gestion.modulos.ui;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
