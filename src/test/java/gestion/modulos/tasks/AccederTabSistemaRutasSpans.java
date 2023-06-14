@@ -1,4 +1,4 @@
-package gestion.modulos.task;
+package gestion.modulos.tasks;
 
 import net.serenitybdd.screenplay.targets.Target;
 

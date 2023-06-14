@@ -1,4 +1,4 @@
-package gestion.modulos.task;
+package gestion.modulos.tasks;
 
 import gestion.modulos.ui.GestionDeTemplatesPage;
 import gestion.modulos.ui.IntranetPage;

@@ -1,12 +1,11 @@
 package gestion.modulos.stepdefinitions;
 
-import gestion.modulos.task.*;
+import gestion.modulos.tasks.*;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class BusquedaStepDefinitions {
 

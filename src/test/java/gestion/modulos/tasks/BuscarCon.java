@@ -1,12 +1,10 @@
-package gestion.modulos.task;
+package gestion.modulos.tasks;
 
 import gestion.modulos.ui.GestionDeInventarioDWDMPage;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.EnterValue;
-import net.serenitybdd.screenplay.actions.EnterValueIntoTarget;
 
 public class BuscarCon {
     public static Performable ingresarDatoSistema(String text) {
