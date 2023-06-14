@@ -34,7 +34,7 @@ public class BusquedaStepDefinitions {
     }
 
     @Y("{actor} selecciona el tab Sistema_Rutas_Spans")
-    public void irTabSistemasRutasSpans(Actor actor) throws InterruptedException {
+    public void irTabSistemasRutasSpans(Actor actor) {
         actor.attemptsTo(
                 IrTab.irTabSistemaRutaSpan()
         );
@@ -42,25 +42,25 @@ public class BusquedaStepDefinitions {
     }
 
     @Y("{actor} ingresa el sistema {string}")
-    public void ingresarBusqueda(Actor actor, String text) throws InterruptedException {
+    public void ingresarBusqueda(Actor actor, String text) {
         actor.attemptsTo(
                 BuscarCon.ingresarDatoSistema(text)
         );
-        Thread.sleep(10000);
     }
 
     @Y("{actor} selecciona el status {string}")
     public void seleccionarStatus(Actor actor, String status) {
         actor.attemptsTo(
-                //IrTab.irTabSistemaRutaSpan()
+                BuscarCon.seleccionarEstado(status)
         );
     }
 
     @Y("{actor} realiza la busqueda")
-    public void realizarBusqueda(Actor actor) {
+    public void realizarBusqueda(Actor actor) throws InterruptedException {
         actor.attemptsTo(
-                //IrTab.irTabSistemaRutaSpan()
+                BuscarCon.clickBuscar()
         );
+        Thread.sleep(10000);
     }
 
     @Entonces("{actor} should see information about {string}")
