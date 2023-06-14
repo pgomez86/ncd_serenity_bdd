@@ -8,13 +8,8 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 public class BuscarCon {
     public static Performable ingresarDatoSistema(String text) {
-        return Task.where("{0} ingresa el dato {1} en sistemas",
+        return Task.where("{0} ingresa el dato:" + text +" en sistemas",
                 Enter.theValue(text).into(GestionDeInventarioDWDMPage.INPUT_SISTEMA)
-        );
-    }
-    public static Performable irMenuGestionModuloDWDM() {
-        return Task.where("{0} accede al item menu 'Gestion de Inventario DWDM'",
-                Click.on(AccederMenuModulo.ITEM_MENU_DWDM)
         );
     }
 }
