@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromElement;
 import net.serenitybdd.screenplay.ui.Checkbox;
+import net.serenitybdd.screenplay.ui.Dropdown;
 
 public class BuscarCon {
     public static Performable ingresarDatoSistema(String text) {
@@ -16,8 +17,8 @@ public class BuscarCon {
     }
 
     public static Performable seleccionarEstado(String status) {
-        return Task.where("{0} selecciona el estado:" + status ,
-                Click.on(Checkbox.withValue(status).inside(GestionDeInventarioDWDMPage.COMBO_STATUS))
+        return Task.where("{0} selecciona el estado:" + status 
+              // Click.on(Dropdown.withLabel(status))
         );
     }
 
