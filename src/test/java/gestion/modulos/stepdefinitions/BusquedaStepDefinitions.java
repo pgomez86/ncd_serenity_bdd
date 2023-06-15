@@ -72,7 +72,7 @@ public class BusquedaStepDefinitions {
         actor.attemptsTo(
                // ResultadoBusquedaInventarioDWDM.ObtenerResultadoRuta(text)
                 Ensure.that(ElementLocated.by("#txtNombreRuta")).isDisplayed(),
-                Ensure.that(ElementLocated.by("#txtFechaRFS")).isDisabled(),
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RFS).isDisabled(),
                 Ensure.that(ElementLocated.by("#txtNombreSistema")).isDisplayed()
         );
     }
