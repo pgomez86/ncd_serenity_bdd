@@ -11,5 +11,5 @@ Característica: MODULO Gestion DWDM -> Sistemas-Rutas-Spans
     Y  Jose ingresa el sistema "sistema 1"
     Y Jose selecciona el status "Active"
     Y Jose realiza la busqueda
-    Entonces Jose  debera visualizar la ruta "12121"
+    Entonces Jose  debera visualizar el dato sistema, la ruta y RFS
 

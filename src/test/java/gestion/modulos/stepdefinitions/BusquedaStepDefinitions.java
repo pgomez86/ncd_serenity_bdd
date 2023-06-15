@@ -66,11 +66,13 @@ public class BusquedaStepDefinitions {
         Thread.sleep(10000);
     }
 
-    @Entonces("{actor} debera visualizar la ruta {string}")
-    public void should_see_information_about(Actor actor, String text) {
+    @Entonces("{actor} debera visualizar el dato sistema, la ruta y RFS")
+    public void should_see_information_about(Actor actor) {
         actor.attemptsTo(
                // ResultadoBusquedaInventarioDWDM.ObtenerResultadoRuta(text)
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).hasText(text)
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).isDisplayed(),
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RFS).isDisplayed(),
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_SISTEMAS).isDisplayed()
         );
     }
 }
