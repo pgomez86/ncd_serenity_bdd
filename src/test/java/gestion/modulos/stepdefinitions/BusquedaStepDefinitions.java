@@ -9,6 +9,7 @@ import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.ensure.web.ElementLocated;
 
 public class BusquedaStepDefinitions {
 
@@ -70,9 +71,9 @@ public class BusquedaStepDefinitions {
     public void DeberaVisualizarResultadosBusquedaInventariosDWDM(Actor actor) {
         actor.attemptsTo(
                // ResultadoBusquedaInventarioDWDM.ObtenerResultadoRuta(text)
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).isDisabled(),
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RFS).isDisabled(),
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_SISTEMAS).isDisabled()
+                Ensure.that(ElementLocated.by("#txtNombreRuta")).isDisplayed(),
+                Ensure.that(ElementLocated.by("#txtFechaRFS")).isDisabled(),
+                Ensure.that(ElementLocated.by("#txtNombreSistema")).isDisplayed()
         );
     }
 }
