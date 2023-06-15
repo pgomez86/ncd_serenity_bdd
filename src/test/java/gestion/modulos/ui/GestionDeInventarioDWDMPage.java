@@ -13,5 +13,6 @@ public class GestionDeInventarioDWDMPage extends PageObject {
     public static Target INPUT_SISTEMA = Target.the("Input de sistema").located(By.id("txtNombreSistemaBusqueda"));
     public static Target LISTA_STATUS = Target.the("Combo de estados").located(By.id("ddlStatusSearch"));
     public static Target BOTON_BUSCAR = Target.the("Boton Buscar").located(By.id("btnBuscarSistema"));
+    public static Target INPUT_RESULTADO_RUTA = Target.the("Input resultado ruta").located(By.id("txtNombreRuta"));
 
 }

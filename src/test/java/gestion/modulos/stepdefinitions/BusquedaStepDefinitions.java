@@ -1,11 +1,14 @@
 package gestion.modulos.stepdefinitions;
 
+import gestion.modulos.questions.ResultadoBusquedaInventarioDWDM;
 import gestion.modulos.tasks.*;
+import gestion.modulos.ui.GestionDeInventarioDWDMPage;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class BusquedaStepDefinitions {
 
@@ -63,10 +66,11 @@ public class BusquedaStepDefinitions {
         Thread.sleep(10000);
     }
 
-    @Entonces("{actor} should see information about {string}")
-    public void should_see_information_about(Actor actor, String term) {
+    @Entonces("{actor} debera visualizar la ruta {string}")
+    public void should_see_information_about(Actor actor, String text) {
         actor.attemptsTo(
-                //Ensure.that(AccederMenuModulo.HEADING).hasText(term)
+               // ResultadoBusquedaInventarioDWDM.ObtenerResultadoRuta(text)
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).hasText(text)
         );
     }
 }

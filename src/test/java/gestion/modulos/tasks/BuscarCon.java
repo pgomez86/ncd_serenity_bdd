@@ -17,7 +17,7 @@ public class BuscarCon {
     }
 
     public static Performable seleccionarEstado(String status) {
-        return Task.where("{0} selecciona el estado:" + status 
+        return Task.where("{0} selecciona el estado:" + status
               // Click.on(Dropdown.withLabel(status))
         );
     }
