@@ -12,4 +12,3 @@ Característica: MODULO Gestion DWDM -> Sistemas-Rutas-Spans
     Y Jose selecciona el status "Active"
     Y Jose realiza la busqueda
     Entonces Jose  debera visualizar el dato sistema, la ruta y RFS
-

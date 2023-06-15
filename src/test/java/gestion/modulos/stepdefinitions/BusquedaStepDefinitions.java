@@ -67,12 +67,12 @@ public class BusquedaStepDefinitions {
     }
 
     @Entonces("{actor} debera visualizar el dato sistema, la ruta y RFS")
-    public void should_see_information_about(Actor actor) {
+    public void DeberaVisualizarResultadosBusquedaInventariosDWDM(Actor actor) {
         actor.attemptsTo(
                // ResultadoBusquedaInventarioDWDM.ObtenerResultadoRuta(text)
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).isDisplayed(),
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RFS).isDisplayed(),
-                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_SISTEMAS).isDisplayed()
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RUTA).isDisabled(),
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_RFS).isDisabled(),
+                Ensure.that(GestionDeInventarioDWDMPage.INPUT_RESULTADO_SISTEMAS).isDisabled()
         );
     }
 }
